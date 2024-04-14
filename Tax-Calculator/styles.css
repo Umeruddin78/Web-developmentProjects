@@ -1,0 +1,77 @@
+ body{
+    background-color: #4547c2;
+ }
+ 
+ #calBox{
+    background-color: #fffefac1;
+    box-shadow: 15px 15px 30px #275472;   
+    border-radius: 10px;
+ }
+
+ .header{
+    background-color: #0F1035;
+ }
+
+ /* Custom CSS for styling */
+ .error-icon {
+    display: none;
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+.custom-box {
+    width: 400px;
+    height: 500px;
+    margin: auto; /* Center the form */
+    margin-top: 50px; /* Adjust top margin for better centering */
+    padding: 20px; /* Padding around the form */
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Styling the modal */
+.modal-dialog-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Custom class for the modal */
+.modal-custom {
+    width: 700px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the content inside the modal */
+.modal-content {
+    padding: 25px; /* Padding inside the modal */
+    text-align: center;
+}
+
+/* Center the close button in the modal header */
+.modal-header {
+    justify-content: center; /* Center the content */
+}
+
+/* Center the close button */
+.modal-header .close {
+    position: static;
+    margin: auto;
+}
+
+/* Add name styling at the bottom right corner */
+.name {
+    position: fixed; /* Use fixed positioning */
+    bottom: 30px; /* Position from the bottom */
+    right: 30px; /* Position from the right */
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}

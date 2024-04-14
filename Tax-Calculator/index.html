@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculation Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="p-3 text-bg-dark header">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2">Login</button>
+              <button type="button" class="btn btn-warning">Sign-up</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <div class="container mt-5">
+        <div class="custom-box border rounded p-5" id="calBox">
+            <form id="taxForm">
+                <div class="form-group">
+                    <label for="grossIncome">Enter Gross Annual Income:
+                      <span class="error-icon" id="grossIncomeError" title="Gross income is required or invalid">!</span>
+                    </label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="grossIncome" placeholder="Enter gross annual income" data-toggle="tooltip" title="Your total salary in a year before any deductions." required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="extraIncome">Enter Extra Income:<span class="error-icon" id="extraIncomeError" title="Extra income is required or invalid">!</span></label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="extraIncome" placeholder="Enter extra income from other sources" data-toggle="tooltip" title="Any additional income you earn, such as freelance work, investment returns, etc.">
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="age">Select Age Group:<span class="error-icon" id="ageError" title="Age group is required">!</span></label>
+                    <div class="input-group">
+                        <select class="form-control" id="age" data-toggle="tooltip" title="Choose your age group:">
+                            <option value="">Select age group</option>
+                            <option value="below40">&lt;40</option>
+                            <option value="40to60">≥40 & &lt;60</option>
+                            <option value="above60">≥60</option>
+                        </select>
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="deductions">Enter Total Applicable Deductions:<span class="error-icon" id="deductionsError" title="Deductions are required or invalid">!</span></label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="deductions" placeholder="Add total applicable deductions" data-toggle="tooltip" title="Deductions that reduce your taxable income, such as expenses or investments.">
+                        
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12 mt-4">
+                        <button type="button" class="btn btn-primary btn-block" onclick="submitForm()">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-custom" role="document">
+            <div class="modal-content mt-5">
+                <div class="modal-body" id="resultBody">
+                    <!-- Result will be displayed here -->
+                </div>
+                <div class="modal-footer modal-header">
+                    <button type="button" class="btn btn-primary close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script> 
+</body>
+
+</html>
